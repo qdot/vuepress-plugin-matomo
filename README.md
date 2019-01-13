@@ -3,6 +3,10 @@
 Allows Matomo access tracking on vuepress >= 1.0. Does not work on
 Vuepress 0.x, requires 1.x alpha branch with plugin support.
 
+This project takes many ideas from
+[vue-matomo](https://github.com/AmazingDreams/vue-matomo/), but tries
+to make them SSR friendly for vuepress usage.
+
 ## Installation
 
 ```
