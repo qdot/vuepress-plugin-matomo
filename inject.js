@@ -54,7 +54,8 @@ export default ({ router }) => {
         // Use window global here, the convenience variable doesn't stick around
         // for some reason.
         window._paq.push(['setDocumentTitle', document.title]);
-        window._paq.push(['trackPageView', to.fullPath]);
+        window._paq.push(['setCustomUrl', to.fullPath]);
+        window._paq.push(['trackPageView']);
       }, 0);
     });
   }
