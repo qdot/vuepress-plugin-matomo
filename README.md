@@ -42,6 +42,10 @@ Add the following block to the plugins array of your *config.js* file.
     * Matomo numeric site ID of the site you want to track
 * enableLinkTracking (boolean, defaults to true, Optional)
     * Enable/disable link click tracking
+* requireConsent (boolean, defaults to false, Optional)
+    * Enable consent checking from user. Useful for GDPR compliance.
+* rememberConsent (boolean, defaults to false, Optional)
+    * Enable remembering of user's choice of consent via cookies.
     
 ## License
 

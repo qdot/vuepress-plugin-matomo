@@ -1,4 +1,4 @@
-/* global MATOMO_SITE_ID, MATOMO_TRACKER_URL, MATOMO_ENABLE_LINK_TRACKING */
+/* global MATOMO_SITE_ID, MATOMO_TRACKER_URL, MATOMO_ENABLE_LINK_TRACKING, MATOMO_REQUIRE_CONSENT, MATOMO_REMEMBER_CONSENT */
 
 // Matomo integration. This is mostly a generalized version of the basic matomo
 // tracker code you'd insert in a JS page. However, since vuepress is SSR, it
@@ -17,6 +17,13 @@ export default ({ router }) => {
     // Create convenience variable here, but don't expect it to last. Use
     // window._paq elsewhere when needed, including closure scopes.
     let _paq = window._paq;
+    // If user requests consent checking, do this before we actually track
+    if (MATOMO_REQUIRE_CONSENT) {
+      _paq.push(['requireConsent']);
+      if (MATOMO_REMEMBER_CONSENT) {
+        _paq.push(['rememberConsentGiven']);
+      }
+    }
     // Tracker methods like "setCustomDimension" should be called before
     // "trackPageView".
     _paq.push(['trackPageView']);
