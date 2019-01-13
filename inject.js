@@ -17,7 +17,9 @@ export default ({ router }) => {
     // Create convenience variable here, but don't expect it to last. Use
     // window._paq elsewhere when needed, including closure scopes.
     let _paq = window._paq;
-    // If user requests consent checking, do this before we actually track
+    // If user requests consent checking, do this before we actually track.
+    // Note: this doesn't work at the moment because the user has no way to set
+    // whether consent was given. Oops.
     if (MATOMO_REQUIRE_CONSENT) {
       _paq.push(['requireConsent']);
       if (MATOMO_REMEMBER_CONSENT) {
