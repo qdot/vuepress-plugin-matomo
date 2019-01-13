@@ -34,10 +34,15 @@ export default ({ router }) => {
       g.src=u+'piwik.js';
       s.parentNode.insertBefore(g,s);
     })();
-    router.afterEach(function (to) {
-      // Use window global here, the convenience variable doesn't stick around
-      // for some reason.
-      window._paq.push(['trackPageView', to.fullPath]);
+    router.afterEach((to) => {
+      // router.afterEach seems to fire before the actual navigation (?), so run
+      // our push in the next loop, after the new document has been set.
+      setTimeout(() => {
+        // Use window global here, the convenience variable doesn't stick around
+        // for some reason.
+        window._paq.push(['setDocumentTitle', document.title]);
+        window._paq.push(['trackPageView', to.fullPath]);
+      }, 0);
     });
   }
 }
