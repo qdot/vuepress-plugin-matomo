@@ -1,4 +1,4 @@
-/* global MATOMO_SITE_ID, MATOMO_TRACKER_URL, MATOMO_ENABLE_LINK_TRACKING, MATOMO_REQUIRE_CONSENT, MATOMO_REMEMBER_CONSENT */
+/* global MATOMO_SITE_ID, MATOMO_TRACKER_URL, MATOMO_ENABLE_LINK_TRACKING, MATOMO_REQUIRE_CONSENT, MATOMO_REMEMBER_CONSENT, MATOMO_TRACKER_JS_FILE, MATOMO_TRACKER_PHP_FILE */
 
 // Matomo integration. This is mostly a generalized version of the basic matomo
 // tracker code you'd insert in a JS page. However, since vuepress is SSR, it
@@ -32,13 +32,17 @@ export default ({ router }) => {
     }
     (function() {
       var u=MATOMO_TRACKER_URL;
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      // Make sure URLs end in a slash
+      if (u.length > 0 && u[u.length - 1] != "/") {
+        u = u.concat("/");
+      }
+      _paq.push(['setTrackerUrl', u+MATOMO_TRACKER_PHP_FILE]);
       _paq.push(['setSiteId', MATOMO_SITE_ID]);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
       g.type='text/javascript';
       g.async=true;
       g.defer=true;
-      g.src=u+'piwik.js';
+      g.src=u+MATOMO_TRACKER_JS_FILE;
       s.parentNode.insertBefore(g,s);
     })();
     router.afterEach((to) => {

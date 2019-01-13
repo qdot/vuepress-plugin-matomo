@@ -40,6 +40,10 @@ Add the following block to the plugins array of your *config.js* file.
     * URL where the piwik.php/piwik.js files can be found
 * siteID (number, **Required**)
     * Matomo numeric site ID of the site you want to track
+* trackerJsFile (string, defaults to "piwik.js", Optional)
+    * Name of the js file to call on the matomo server
+* trackerPhpFile (string, defaults to "piwik.php", Optional)
+    * Name of the php file to call on the matomo server
 * enableLinkTracking (boolean, defaults to true, Optional)
     * Enable/disable link click tracking
 * requireConsent (boolean, defaults to false, Optional)
