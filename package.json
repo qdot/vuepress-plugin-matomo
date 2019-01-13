@@ -1,0 +1,26 @@
+{
+  "name": "vuepress-plugin-matomo",
+  "version": "1.0.0",
+  "description": "matomo plugin for vuepress >= 1.0",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qdot/vuepress-plugin-matomo.git"
+  },
+  "keywords": [
+    "documentation",
+    "vue",
+    "vuepress",
+    "generator",
+    "matomo"
+  ],
+  "author": "kyle@nonpolynomial.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qdot/vuepress-plugin-matomo/issues"
+  },
+  "homepage": "https://github.com/qdot/vuepress-plugin-matomo/"
+}
