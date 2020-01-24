@@ -26,17 +26,20 @@ Add the following block to the plugins array of your *config.js* file.
 ```js
 // ...
   plugins: [
+    // ... other plugins...
     [
-      // ...
       "vuepress-plugin-matomo",
       {
         'siteId': 1,
         'trackerUrl': "https://my.matomo.url.here/"
-      },
-      // ...
-    ]
+      }
+    ],
+    // ... more plugins...
+  ]
 // ...
 ```
+
+Also [see vuepress' plugin page](https://vuepress.vuejs.org/plugin/using-a-plugin.html). This plugin uses [babel-style options](https://vuepress.vuejs.org/plugin/using-a-plugin.html#plugin-options) for configuration.
 
 ## Plugin Options
 
