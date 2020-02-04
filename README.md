@@ -28,7 +28,7 @@ Add the following block to the plugins array of your *config.js* file.
   plugins: [
     // ... other plugins...
     [
-      "vuepress-plugin-matomo",
+      "vuepress-plugin-matomo":
       {
         'siteId': 1,
         'trackerUrl': "https://my.matomo.url.here/"
