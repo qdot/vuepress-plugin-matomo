@@ -1,14 +1,14 @@
 {
-  "name": "vuepress-plugin-matomo",
+  "name": "@lukemnet/vuepress-plugin-matomo",
   "version": "1.0.2",
-  "description": "matomo plugin for vuepress >= 1.0",
+  "description": "Matomo plugin for VuePress",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qdot/vuepress-plugin-matomo.git"
+    "url": "git+https://github.com/lukemnet/vuepress-plugin-matomo.git"
   },
   "keywords": [
     "documentation",
@@ -17,10 +17,13 @@
     "generator",
     "matomo"
   ],
-  "author": "kyle@nonpolynomial.com",
+  "author": {
+    "name": "Łukasz Wójcik",
+    "url": "https://www.lukem.net/"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qdot/vuepress-plugin-matomo/issues"
+    "url": "https://github.com/lukemnet/vuepress-plugin-matomo/issues"
   },
-  "homepage": "https://github.com/qdot/vuepress-plugin-matomo/"
+  "homepage": "https://github.com/lukemnet/vuepress-plugin-matomo/"
 }
