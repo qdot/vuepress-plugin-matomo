@@ -1,6 +1,6 @@
 {
   "name": "@lukemnet/vuepress-plugin-matomo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Matomo plugin for VuePress",
   "main": "index.js",
   "publishConfig": {
