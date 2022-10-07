@@ -1,9 +1,8 @@
 # @lukemnet/vuepress-plugin-matomo
 
-Allows Matomo access tracking on vuepress >= 1.0. Does not work on
-Vuepress 0.x, requires 1.x alpha branch with plugin support.
+Allows Matomo access tracking on VuePress.
 
-This project is a fork of https://github.com/qdot/vuepress-plugin-matomo.
+This project is an independently maintained fork of [vuepress-plugin-matomo](https://github.com/qdot/vuepress-plugin-matomo) intended to keep compatibility with future VuePress versions.
 
 This project takes many ideas from
 [vue-matomo](https://github.com/AmazingDreams/vue-matomo/), but tries
@@ -21,7 +20,7 @@ or
 yarn add vuepress-plugin-matomo
 ```
 
-## Vuepress Setup
+## VuePress Setup
 
 Add the following block to the plugins array of your _config.js_ file.
 
