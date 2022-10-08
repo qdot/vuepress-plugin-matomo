@@ -2,7 +2,7 @@
 
 Allows Matomo access tracking on VuePress.
 
-This project is an independently maintained fork of [vuepress-plugin-matomo](https://github.com/qdot/vuepress-plugin-matomo) intended to keep compatibility with future VuePress versions.
+This project is an independently maintained fork of [vuepress-plugin-matomo](https://github.com/qdot/vuepress-plugin-matomo) intended to keep compatibility with future versions of VuePress and Matomo.
 
 This project takes many ideas from
 [vue-matomo](https://github.com/AmazingDreams/vue-matomo/), but tries
@@ -11,13 +11,13 @@ to make them SSR friendly for vuepress usage.
 ## Installation
 
 ```bash
-npm install vuepress-plugin-matomo
+npm install @lukemnet/vuepress-plugin-matomo
 ```
 
 or
 
 ```bash
-yarn add vuepress-plugin-matomo
+yarn add @lukemnet/vuepress-plugin-matomo
 ```
 
 ## VuePress Setup
